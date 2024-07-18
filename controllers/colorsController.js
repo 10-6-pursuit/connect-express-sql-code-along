@@ -1,7 +1,7 @@
 const express = require("express");
 const colors = express.Router();
 const { getAllColors, getColor, createColor } = require("../queries/color");
-
+const { checkName, checkBoolean } = require("../validations/checkColors");
 // Index
 colors.get("/", async (req, res) => {
   const allColors = await getAllColors();
@@ -22,7 +22,7 @@ colors.get("/:id", async (req, res) => {
   }
 });
 
-colors.post("/", async (req, res) => {
+colors.post("/", checkName, checkBoolean, async (req, res) => {
   const color = await createColor(req.body);
   res.json(color);
 });
