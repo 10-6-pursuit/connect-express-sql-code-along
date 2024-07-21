@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS colors_prod;
-CREATE DATABASE colors_prod;
+DROP DATABASE IF EXISTS colors_prod_4r4u;
+CREATE DATABASE colors_prod_4r4u;
 
-\c colors_prod;
+\c colors_prod_4r4u;
 
 CREATE TABLE colors (
     id SERIAL PRIMARY KEY,
