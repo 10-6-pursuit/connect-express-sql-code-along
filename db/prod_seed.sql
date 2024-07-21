@@ -1,6 +1,6 @@
-\c colors_dev;
+\c colors_prod;
 
-INSERT INTO 
+INSERT INTO
     colors (name, is_favorite)
 VALUES
     ('Orchid', true),
